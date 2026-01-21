@@ -66,3 +66,4 @@ button.addEventListener("click", () => {
   startUpload(uploadCompleted);
   buttonDisabled(button);
 });
+
