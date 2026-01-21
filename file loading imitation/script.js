@@ -49,16 +49,16 @@ function addNotification(message) {
   const notificationDiv = document.getElementById("notifications");
   notificationDiv.textContent = message;
 }
+
 const button = document.getElementById("button");
+
 function buttonDisabled(button) {
-  button.style.backgroundColor = "#eee";
-  button.style.borderColor = "#ddd";
+  button.style.cssText = "background-color: #eee; border-color:#ddd";
   button.disabled = true;
   button.textContent = "Загрузка...";
 }
 function buttonEnabled(button) {
-  button.style.backgroundColor = "";
-  button.style.borderColor = "";
+  button.style.cssText = "background-color: ; border-color:";
   button.disabled = false;
   button.textContent = "Загрузить файл";
 }
@@ -66,5 +66,3 @@ button.addEventListener("click", () => {
   startUpload(uploadCompleted);
   buttonDisabled(button);
 });
-
-
